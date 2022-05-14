@@ -93,6 +93,27 @@ export default function App() {
           ) : (
             <>
               <div className="question-section">
+                {examAnswers ? (
+                  <div className="quetion-skipper">
+                    <h4>Skip to question:</h4>
+                    <input
+                      className="skip-question"
+                      type="number"
+                      onChange={(e) => {
+                        console.log(e.target.value)
+                        if (e.target.value !== '') {
+                          setCurrentQuestion(parseInt(e.target.value) - 1)
+                        }
+                        if (e.target.value > '553') {
+                          setCurrentQuestion(552)
+                        }
+                      }}
+                    />
+                  </div>
+                ) : (
+                  ''
+                )}
+
                 <div className="question-count">
                   <span>Question {currentQuestion + 1}</span>/{questions.length}
                 </div>
@@ -120,7 +141,7 @@ export default function App() {
 
                   {examAnswers ? (
                     <button className="btn btn-default" type="submit">
-                      Submit
+                      Check Answer
                     </button>
                   ) : (
                     ''
