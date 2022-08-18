@@ -1,87 +1,87 @@
-import React, { useState, useEffect } from 'react'
-import core1 from './data/core1.json'
+import React, { useState, useEffect } from "react";
+import core1 from "./data/core1.json";
 
 export default function App() {
   //console.log(questions);
 
-  const [currentQuestion, setCurrentQuestion] = useState(0)
-  const [showScore, setShowScore] = useState(false)
-  const [score, setScore] = useState(0)
-  const [answerStr, setAnswerStr] = useState('')
-  const [optionsSubmit, setOptionSubmit] = useState(false)
-  const [showExam, setExam] = useState(false)
-  const [examAnswers, setExamAnswers] = useState(true)
-  const [questions, setQuestions] = useState([])
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [showScore, setShowScore] = useState(false);
+  const [score, setScore] = useState(0);
+  const [answerStr, setAnswerStr] = useState("");
+  const [optionsSubmit, setOptionSubmit] = useState(false);
+  const [showExam, setExam] = useState(false);
+  const [examAnswers, setExamAnswers] = useState(true);
+  const [questions, setQuestions] = useState([]);
 
-  let fullDataSet = []
+  let fullDataSet = [];
 
   const getRandom = (arr, n) => {
     let result = new Array(n),
       len = arr.length,
-      taken = new Array(len)
+      taken = new Array(len);
 
     while (n--) {
-      let x = Math.floor(Math.random() * len)
-      result[n] = arr[x in taken ? taken[x] : x]
-      taken[x] = --len in taken ? taken[len] : len
+      let x = Math.floor(Math.random() * len);
+      result[n] = arr[x in taken ? taken[x] : x];
+      taken[x] = --len in taken ? taken[len] : len;
     }
-    return result
-  }
+    return result;
+  };
 
   const examMode = (mode) => {
-    setExam(true)
-    if (mode === 'practice') {
+    setExam(true);
+    if (mode === "practice") {
       for (let i in core1) {
-        fullDataSet.push(core1[i])
+        fullDataSet.push(core1[i]);
       }
-      setQuestions(fullDataSet)
+      setQuestions(fullDataSet);
     } else {
       for (let i in core1) {
-        fullDataSet.push(core1[i])
+        fullDataSet.push(core1[i]);
       }
-      setExamAnswers(false)
-      setQuestions(getRandom(fullDataSet, 75))
+      setExamAnswers(false);
+      setQuestions(getRandom(fullDataSet, 75));
     }
-  }
+  };
 
   const handleAnswerOptionClick = (event) => {
-    setOptionSubmit(true)
-    event.preventDefault()
-  }
+    setOptionSubmit(true);
+    event.preventDefault();
+  };
 
   const nextQuestion = () => {
-    setAnswerStr('')
-    let followquestion = currentQuestion + 1
+    setAnswerStr("");
+    let followquestion = currentQuestion + 1;
     if (followquestion < questions.length) {
-      setCurrentQuestion(followquestion)
+      setCurrentQuestion(followquestion);
     } else {
-      setShowScore(true)
+      setShowScore(true);
     }
 
-    let answercheckarr = []
-    let answercheck = ''
+    let answercheckarr = [];
+    let answercheck = "";
     for (let i in answerStr) {
-      answercheckarr.push(answerStr.charAt(i))
+      answercheckarr.push(answerStr.charAt(i));
     }
-    answercheckarr.sort()
+    answercheckarr.sort();
     for (let i in answercheckarr) {
-      answercheck = answercheck + answercheckarr[i]
+      answercheck = answercheck + answercheckarr[i];
     }
-    console.log(answercheck)
-    let prunedAnswer = questions[currentQuestion][3].split(/\r?\n/)[0]
+    console.log(answercheck);
+    let prunedAnswer = questions[currentQuestion][3].split(/\r?\n/)[0];
 
-    if (`Answer:${answercheck}` === prunedAnswer.replace(/ /g, '')) {
-      alert('correct answer')
-      setScore(score + 1)
+    if (`Answer:${answercheck}` === prunedAnswer.replace(/ /g, "")) {
+      alert("correct answer");
+      setScore(score + 1);
     }
 
-    document.getElementById('main-form').reset()
-    setOptionSubmit(false)
-  }
+    document.getElementById("main-form").reset();
+    setOptionSubmit(false);
+  };
 
   useEffect(() => {
-    console.log('In effect: ' + answerStr)
-  })
+    console.log("In effect: " + answerStr);
+  });
   return (
     <div className="app">
       {showExam ? (
@@ -100,18 +100,18 @@ export default function App() {
                       className="skip-question"
                       type="number"
                       onChange={(e) => {
-                        console.log(e.target.value)
-                        if (e.target.value !== '') {
-                          setCurrentQuestion(parseInt(e.target.value) - 1)
+                        console.log(e.target.value);
+                        if (e.target.value !== "") {
+                          setCurrentQuestion(parseInt(e.target.value) - 1);
                         }
-                        if (e.target.value > '553') {
-                          setCurrentQuestion(552)
+                        if (parseInt(e.target.value) > 543) {
+                          setCurrentQuestion(542);
                         }
                       }}
                     />
                   </div>
                 ) : (
-                  ''
+                  ""
                 )}
 
                 <div className="question-count">
@@ -131,7 +131,7 @@ export default function App() {
                           onClick={() => {
                             if (answerStr === answerOption.charAt(0)) {
                             }
-                            setAnswerStr(answerStr + answerOption.charAt(0))
+                            setAnswerStr(answerStr + answerOption.charAt(0));
                           }}
                         />
                         {answerOption}
@@ -144,13 +144,13 @@ export default function App() {
                       Check Answer
                     </button>
                   ) : (
-                    ''
+                    ""
                   )}
                 </form>
                 {optionsSubmit && examAnswers ? (
                   <h3>Correct {questions[currentQuestion][3]}</h3>
                 ) : (
-                  ''
+                  ""
                 )}
 
                 <button onClick={nextQuestion}>Next Question</button>
@@ -163,7 +163,7 @@ export default function App() {
           <button
             className="button-19"
             onClick={() => {
-              examMode('exam')
+              examMode("exam");
             }}
           >
             Exam Mode
@@ -171,7 +171,7 @@ export default function App() {
           <button
             className="button-19"
             onClick={() => {
-              examMode('practice')
+              examMode("practice");
             }}
           >
             Full Question Bank
@@ -179,5 +179,5 @@ export default function App() {
         </>
       )}
     </div>
-  )
+  );
 }

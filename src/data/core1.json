@@ -1,29 +1,11 @@
 [
   [
-    0,
-    "SIMULATION -\nLaura, a customer, has instructed you to configure her home office wireless access point.\nShe plans to use the wireless network for finances and has requested that the network be setup with the highest encryption possible.\nAdditionally, Laura knows that her neighbors have wireless networks and wants to ensure that her network is not being interfered with by the other networks.\nShe requests that the default settings be changed to the following.\n\nWireless Name: HomeWiFi -\n\nShared Key: CompTIA -\n\nRouter Password: Secure$1 -\nFinally, Laura wants to ensure that only her laptop and SmartPhone can connect to the network.\nLaptop: IP Address 192.168.1.100\nHardware Address: 00:0A:BF:03:C4:54\nSmartPhone: IP Address 192.168.1.101\nHardware Address: 09:2C:D0:22:3F:11\n\nINSTRUCTIONS -\nConfigure Lauraג€™s wireless network using the network adapter window.\nIf at any time you would like to bring back the initial state of the simulation, please click the Reset All button.\n\n\n\n\n\n\n\n",
-    [[]],
-    "Answer : See the explanation below\n\nExplanation:\n\n\n\n\n\n\n\n"
-  ],
-  [
     1,
     "Which of the following would MOST likely be used to connect one or more devices to the Internet in a SOHO?\n",
     [
       ["A. Hub", "B. Ethernet gateway", "C. Wireless access point", "D. Router"]
     ],
     "Answer : C\n\nReference:\nhttps://www.professormesser.com/free-a-plus-training/220-1001/installing-a-soho-network/\n"
-  ],
-  [
-    2,
-    "DRAG DROP -\nA customer, Ann, has requested two custom PCs, one to be used for gaming and the other to be used as a virtualization workstation for her business.\nThe gaming PC should support the latest games and gaming peripherals.\nThe virtualization workstation should be able to host several production virtual machines as part of Annג€™s home business.\n\nINSTRUCTIONS -\nUse the tabs at the top to switch between the PCs.\nObjects should be placed on the appropriate slot/display areas and can only be used once.\nAll slot/display areas should be filled.\nIf at any time you would like to bring back the initial state of the simulation, please click the Reset All button.\nSelect and Place:\n\n\n\n",
-    [[]],
-    "Answer :"
-  ],
-  [
-    3,
-    "SIMULATION -\nThe network administrator has changed the IP address of ComputerA from 192.168.1.20 to 10.10.10.20 and now Jane, a user, is unable to connect to file shares on ComputerA from ComputerB using the computer name.\n\nINSTRUCTIONS -\nUsing the available tools, resolve the connectivity issues.\nAfter troubleshooting the issue, verify a successful connection.\nIf at any time you would like to bring back the initial state of the simulation, please click the Reset All button.\n\n\n\n\n\n\n\n\n\n",
-    [[]],
-    "Answer : See the explanation below\n\nExplanation:\nWe need to flush the DNS to have the new IP address assigned to the same computer name. Use the ipconfig/flushdns command.\n"
   ],
   [
     4,
@@ -863,22 +845,10 @@
     "Answer : DEH"
   ],
   [
-    78,
-    "SIMULATION -\nAnn, a local librarian, has had a previously used wireless access point donated to her. She has instructed you to configure this new wireless access point for her public library. Ann plans to allow anyone to connect to the access point without having to ask her for configuration information. Additionally, Ann knows that her neighbors have wireless networks and wants to ensure that her network has the least likelihood of interfering with the other networks. Ann has provided you with the following information.\n\nWireless Name: Library -\n\nNew Router Password: Secure$1 -\n\nINSTRUCTIONS -\nConfigure Annג€™s wireless library network using the network adapter window.\nIf at any time you would like to bring back the initial state of the simulation, please click the Reset All button.\n\n\n\n\n\n\n\n\n\n",
-    [[]],
-    "Answer : See explanation below\n\nExplanation:\n\n\n\n\n\n\n\n"
-  ],
-  [
     79,
     "A user sets up a cable modem at home and connects the modem to the ISP at the cable company. Which of the following network types does this connection describe?\n",
     [["A. WAN", "B. LAN", "C. PAN", "D. MAN"]],
     "Answer : A"
-  ],
-  [
-    80,
-    "SIMULATION -\nYou need to configure your mobile device to send and receive electronic messages from your company.\nYou must use the companyג€™s WLAN as all e-mail services are on default non-secure ports.\nThe companyג€™s WLAN is broadcasting across the company for easier access. Both incoming and outgoing servers require login credentials.\nUse the following parameters:\nג€¢ Email address [email protected] com\nג€¢ Password [email protected]\nג€¢ Pop techies com Port 110 Security. None\nג€¢ IMAP techies com Port 993 Security SSL\nג€¢ smtp.techies.com Port 465 Security: TLS\nג€¢ Company SSID Techies\nג€¢ Security WPA2\nג€¢ Passphrase [email protected]\nג€¢ SSID is not broadcasted\nINSTRUCTIONS:\nUpdate the mobile deviceג€™s parameters to fit the criteria.\nIf at any time you would like to bring back the initial state of the simulation, please click the Reset All button.\n\n\n\n",
-    [[]],
-    "Answer : See explanation below\n\nExplanation:\n\n\n\n\n\n"
   ],
   [
     81,
@@ -1949,12 +1919,6 @@
     "Answer : A"
   ],
   [
-    184,
-    "SIMULATION -\nYou need to configure your mobile device to send and receive electronic messages from your company.\nYou must use the companyג€™s WLAN as all e-mail services are on default non-secure ports.\nThe companyג€™s WLAN is broadcasting across the company for easier access.\nUsers must authenticate to the server with the same credentials in order to send and receive email.\nAuthentication should be enforced in the settings of the mobile device using the following parameters:\n✑ Username: [email protected]\n✑ Password: [email protected]$$w0rd\n✑ Outgoing server: mail.techies.com\n✑ Incoming server: pop3.techies.com\n✑ Company SSID: Techies\n✑ Security Key: CA:FE:33:71:00\n\nINSTRUCTIONS -\nUpdate the mobile deviceג€™s parameters to fit the criteria and support the strongest encryption available.\nIf at any time you would like to bring back the initial state of the simulation, please click the Reset All button.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
-    [[]],
-    "Answer : See explanation below.\n\nExplanation:\nFor the WiFi setup, do the following:\n1. Enable 802.11 b/g Radio\n2. Choose the Techies SSID, enter the CA:FE:33:71:00 security Key.\n3. Choose the ג€Same as Incoming Serverג€ option below.\n\n\n\nFor Email setup, choose the following:\n\n\n\n\n"
-  ],
-  [
     185,
     "An instructor had been lecturing for 20 minutes and utilizing the overhead projection system, when the projector suddenly went blank. A technician was dispatched and was able to start the projector after several minutes; however, the screen went blank after briefly displaying the slideshow.\nWhich of the following would be the technicianג€™s NEXT best option?\n",
     [
@@ -2523,18 +2487,6 @@
       ]
     ],
     "Answer : A"
-  ],
-  [
-    239,
-    "SIMULATION -\nAnn, a CEO, has purchased a new consumer-class tablet for personal use, but she is unable to connect it to the companyג€™s wireless network. All the corporate laptops are connecting without issue. She has asked you to assist with getting the device online.\n\nINSTRUCTIONS -\nReview the network diagrams and device configurations to determine the cause of the problem and resolve any discovered issues.\nIf at any time you would like to bring back the initial state of the simulation, please click the Reset All button.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
-    [[]],
-    "Answer : See explanation below.\n\nExplanation:\nAnn needs to connect to the BYOD SSID, using 2.4GHZ. The selected security method chose should be WPA PSK, and the password should be set to\nTotallySecret.\n"
-  ],
-  [
-    240,
-    "SIMULATION -\nMegan, the CEO, is unable to connect to the companyג€™s network on her company-issued enterprise tablet when in the office, however, it works perfectly from home. All the corporate laptops are connected to the wireless network without issue. She has asked you for assistance in getting the device online.\n\nINSTRUCTIONS -\nReview the network diagrams and device configurations to determine the cause of the problem and resolve any discovered issues.\nIf at any time you would like to bring back the initial state of the simulation, please click the Reset All button.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
-    [[]],
-    "Answer : See explanation below.\n\nExplanation:\nMegan needs to connect to the CORP SSID, using 2.4GHZ. The selected security method chose should be WPA2, and the password should be set to\nCorpsecure1.\n"
   ],
   [
     241,
@@ -5099,18 +5051,6 @@
       ]
     ],
     "Answer : C"
-  ],
-  [
-    479,
-    "DRAG DROP -\nDrag and drop each mobile technology to the description of its use. Some answers will not be used.\nSelect and Place:\n\n\n\n",
-    [[]],
-    "Answer :"
-  ],
-  [
-    480,
-    "SIMULATION -\nA small ISP has hired a new technician. Joe, the new technician, is being trained to configure customersג€™ home networks. The training instructor gives the technician a starter kit with cables, cable ends, and other network equipment and asks him to build a working network.\nThe computer should be connected to have Internet connectivity and the phone should be connected to have a dial tone.\n\nINSTRUCTIONS -\nUse the appropriate cables, cable ends, tools and equipment to configure the network and connect all components accordingly.\nThere are 3 steps and the simulation starts on step 1.\nIf at any time you would like to bring back the initial state of the simulation, please click the Reset All button.\n\nStep 1 -\n\n\n\n\nStep 2 -\n\n\n",
-    [[]],
-    "Answer : See explanation below.\n\nExplanation:\n\n\n\n\n\n"
   ],
   [
     481,
